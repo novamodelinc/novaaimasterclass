@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: ai1
 emoji: 🐳
@@ -10,3 +11,6 @@ tags:
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+=======
+# novaaimasterclass
+>>>>>>> e8655bb73f8b1778917f4abf88fe8aff19730625
