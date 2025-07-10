@@ -1,19 +1,172 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>My static Space</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="card">
-			<h1>Welcome to your static Space!</h1>
-			<p>You can modify this app directly by editing <i>index.html</i> in the Files and versions tab.</p>
-			<p>
-				Also don't forget to check the
-				<a href="https://huggingface.co/docs/hub/spaces" target="_blank">Spaces documentation</a>.
-			</p>
-		</div>
-	</body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova AI Masterclass</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0055ff;
+      --bg: #f9f9fb;
+      --text: #222;
+      --card: #fff;
+      --radius: 16px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: #eaeefc;
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    header p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: #444;
+    }
+    .cta {
+      padding: 1rem 2rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .features, .modules {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+    .testimonial, .instructor, .faq {
+      margin-top: 4rem;
+    }
+    .testimonial blockquote {
+      font-style: italic;
+      margin: 1rem auto;
+      max-width: 700px;
+    }
+    footer {
+      background: #eaeefc;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nova AI Masterclass</h1>
+    <p>Transform your skills with our no-fluff, real-world AI course — built for modern creators, founders, and freelancers.</p>
+    <a href="#" class="cta">Start Learning Now</a>
+  </header>
+
+  <section>
+    <h2>Why Nova?</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Real AI Tools</h3>
+        <p>Hands-on with ChatGPT, Midjourney, Notion AI, Zapier, Make, and more.</p>
+      </div>
+      <div class="card">
+        <h3>Profit-Driven Projects</h3>
+        <p>Launch side-hustles, automate workflows, and build passive systems.</p>
+      </div>
+      <div class="card">
+        <h3>Instant Use Cases</h3>
+        <p>No theory — just plug-and-play prompts, workflows, and monetization.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What You'll Learn</h2>
+    <div class="modules">
+      <div class="card">
+        <h3>Prompt Engineering</h3>
+        <p>Write advanced prompts that generate cash-flowing content in minutes.</p>
+      </div>
+      <div class="card">
+        <h3>AI Automation</h3>
+        <p>Build AI systems that run your business while you sleep.</p>
+      </div>
+      <div class="card">
+        <h3>Design with Midjourney</h3>
+        <p>Create ad creatives, brand visuals, and product mockups that convert.</p>
+      </div>
+      <div class="card">
+        <h3>Build & Sell</h3>
+        <p>Turn your knowledge into real digital assets you can sell or scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <h2>What Students Say</h2>
+    <blockquote>"I launched a print-on-demand store in 2 days using just AI and Nova's steps. Game-changing." – Lisa K.</blockquote>
+    <blockquote>"I use what I learned every day for freelance gigs. Already made back the course price x10." – Marco D.</blockquote>
+  </section>
+
+  <section class="instructor">
+    <h2>Your Instructor</h2>
+    <p>👩‍💼 Nova is a creator and AI strategist who scaled to $100k/year using simple automations, visual prompts, and smart workflows. She shares it all in this course.</p>
+  </section>
+
+  <section class="faq">
+    <h2>FAQs</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Do I need coding skills?</h3>
+        <p>Nope! Everything is drag-and-drop and prompt-based.</p>
+      </div>
+      <div class="card">
+        <h3>How long is the course?</h3>
+        <p>4 weeks. Self-paced with lifetime access.</p>
+      </div>
+      <div class="card">
+        <h3>What's included?</h3>
+        <p>Videos, templates, prompts, live Q&As, and private community.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Nova. Built with AI. | Privacy | Terms
+  </footer>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Will6723783/ai1" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
 </html>
