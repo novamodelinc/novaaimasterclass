@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0055ff;
-      --bg: #f9f9fb;
-      --text: #222;
-      --card: #fff;
+      --primary: #6c63ff;
+      --bg: #0d0d1f;
+      --text: #ffffff;
+      --card: #1c1c3a;
       --radius: 16px;
     }
     * {
@@ -26,12 +25,28 @@
       line-height: 1.6;
     }
     header {
-      background: #eaeefc;
-      padding: 6rem 2rem 4rem;
+      background: #000;
+      padding: 8rem 2rem 6rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+      z-index: 0;
+    }
+    header h1, header p, header .cta {
+      position: relative;
+      z-index: 1;
     }
     header h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 800;
       color: var(--primary);
       margin-bottom: 1rem;
@@ -39,7 +54,8 @@
     header p {
       max-width: 600px;
       margin: 0 auto 2rem;
-      color: #444;
+      color: #ddd;
+      font-size: 1.2rem;
     }
     .cta {
       padding: 1rem 2rem;
@@ -49,13 +65,20 @@
       border-radius: var(--radius);
       font-weight: bold;
       text-decoration: none;
+      font-size: 1rem;
     }
     section {
       padding: 5rem 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
-    .features, .modules {
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #f0f0f0;
+    }
+    .features, .modules, .faq .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
@@ -65,35 +88,82 @@
       background: var(--card);
       border-radius: var(--radius);
       padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
     .card h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.4rem;
     }
-    .testimonial, .instructor, .faq {
+    .testimonial, .instructor, .faq, .media-section, .signup-section {
       margin-top: 4rem;
     }
     .testimonial blockquote {
       font-style: italic;
       margin: 1rem auto;
       max-width: 700px;
+      text-align: center;
+      color: #bbb;
+    }
+    .media-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .media-gallery img, .media-gallery video {
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .signup-box {
+      background: var(--card);
+      padding: 3rem 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    .signup-box h2 {
+      margin-bottom: 1rem;
+    }
+    .signup-box p {
+      margin-bottom: 2rem;
+    }
+    .signup-box input[type="email"] {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 1rem;
+    }
+    .signup-box button {
+      padding: 1rem 2rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      font-weight: bold;
+      cursor: pointer;
     }
     footer {
-      background: #eaeefc;
+      background: #151532;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      color: #666;
+      color: #aaa;
       margin-top: 3rem;
     }
   </style>
 </head>
 <body>
   <header>
+    <video autoplay muted loop>
+      <source src="dreamina-2025-07-10-6660.mp4" type="video/mp4">
+    </video>
     <h1>Nova AI Masterclass</h1>
-    <p>Transform your skills with our no-fluff, real-world AI course — built for modern creators, founders, and freelancers.</p>
-    <a href="#" class="cta">Start Learning Now</a>
+    <p>Future-proof your skills with the world’s most engaging AI training — built for creators, entrepreneurs, and visionaries.</p>
+    <a href="#signup" class="cta">Join the Waitlist</a>
   </header>
 
   <section>
@@ -136,6 +206,17 @@
     </div>
   </section>
 
+  <section class="media-section">
+    <h2>See It in Action</h2>
+    <div class="media-gallery">
+      <video controls>
+        <source src="dreamina-2025-07-10-6660.mp4" type="video/mp4">
+      </video>
+      <img src="https://media.tenor.com/78h3W77XYPgAAAAd/ai.gif" alt="AI Gif 1">
+      <img src="https://media.tenor.com/rRP-LNf_ZUgAAAAd/ai-neon.gif" alt="AI Gif 2">
+    </div>
+  </section>
+
   <section class="testimonial">
     <h2>What Students Say</h2>
     <blockquote>"I launched a print-on-demand store in 2 days using just AI and Nova's steps. Game-changing." – Lisa K.</blockquote>
@@ -165,8 +246,20 @@
     </div>
   </section>
 
+  <section class="signup-section" id="signup">
+    <div class="signup-box">
+      <h2>Join the Waitlist</h2>
+      <p>Be the first to know when enrollment opens. Get early access, bonuses, and exclusive content.</p>
+      <form action="#" method="post">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <br>
+        <button type="submit">Sign Up Now</button>
+      </form>
+    </div>
+  </section>
+
   <footer>
-    © 2025 Nova. Built with AI. | Privacy | Terms
+    © 2025 Nova AI Masterclass. Powered by imagination and AI. | Privacy | Terms
   </footer>
 <p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Will6723783/ai1" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
 </html>
