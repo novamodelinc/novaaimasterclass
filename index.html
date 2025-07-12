@@ -248,14 +248,37 @@
 
   <section class="signup-section" id="signup">
     <div class="signup-box">
-      <h2>Join the Waitlist</h2>
-      <p>Be the first to know when enrollment opens. Get early access, bonuses, and exclusive content.</p>
-      <form action="https://formspree.io/f/myzpggzg" method="POST">
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <br>
-        <button type="submit">Sign Up Now</button>
-      </form>
-    </div>
+     <h2>Join the Waitlist</h2>
+<p>Be the first to know when enrollment opens. Get early access, bonuses, and exclusive content.</p>
+
+<form id="signupForm">
+  <input type="email" name="email" id="emailInput" placeholder="Enter your email" required />
+  <button type="submit">Sign Up Now</button>
+</form>
+
+<script>
+  document.getElementById("signupForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById("emailInput").value;
+
+    const res = await fetch("https://formspree.io/f/myzpggzg", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({ email: email })
+    });
+
+    if (res.ok) {
+      alert("Thanks for signing up!");
+    } else {
+      alert("Oops! Something went wrong.");
+    }
+  });
+</script>
+
   </section>
 
   <footer>
